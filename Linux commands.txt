@@ -1,0 +1,33 @@
+Linux Commands
+
+ssh susing@cs.csis.work (open uni server on cmd)
+-Change password :- passwd
+-w :- number of user on the system
+-finger :- number of user on system
+-who:-
+-pwd:-working directory
+-mkdir :-make directory
+-ls:- list files in directory
+-ls -l :-More information about files in directory
+-cd name :- move in the directory
+-cd .. :- change directory to previous one
+-rmdir :- only be used to delete an empty directory
+-rm filename:- delete the file and directory
+
+vim filename
+i,I,a,A,o,O -> Insert mode
+
+vim hello.go(creates go file)
+////
+package main
+
+import "fmt"
+func main()
+
+
+///
+esc :wq save the program
+
+vim variables.go
+yy copy the line
+:11 takes you to line 11
