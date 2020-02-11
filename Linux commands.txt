@@ -31,3 +31,18 @@ esc :wq save the program
 vim variables.go
 yy copy the line
 :11 takes you to line 11
+
+
+ls -l
+total 8
+-rw-r--r--  1 susing  susing   41 Feb 11 10:37 hello.pl
+-rw-r--r--  1 susing  susing  129 Jan 13 13:10 index.html
+cs$ chmod 740 hello.pl
+cs$ ls -l
+total 8
+-rwxr-----  1 susing  susing   41 Feb 11 10:37 hello.pl
+-rw-r--r--  1 susing  susing  129 Jan 13 13:10 index.html
+
+
+./hello.pl
+Hello World
