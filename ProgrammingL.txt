@@ -1,0 +1,10 @@
+* Python
+* C#
+* Swift
+* R
+* Perl
+* Objective C
+* Java
+* Pascal
+* Racket
+* D
