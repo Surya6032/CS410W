@@ -1,0 +1,10 @@
+cd public_html
+ls -l
+./processReact.pl
+
+Why do we need function?
+
+Lists:-
+scores=(50,65,82);
+print $score[1];
+* names=('Bob','Sally','George');
