@@ -5,6 +5,23 @@ ls -l
 Why do we need function?
 
 Lists:-
-scores=(50,65,82);
+*scores=(50,65,82);
 print $score[1];
 * names=('Bob','Sally','George');
+*stuff=(@names,@score);        //List with names and scores
+*nums(1..75);  //List of 1 to 75
+($x,$y) = (50,100);
+($n1,$n2) = ($n2,$n1);  //Swap these two lists
+($x,$y)=@scores;
+($z,@temp) = @scores;  //z will take first value and rest will take by temp
+(@temp,$z)=@scores;
+$n = @scores;
+$l=$#scores; // give you last subscript
+
+foreach $num (@scores)
+{
+    if (defined $num)
+	{
+	  print("$num \n";
+	}
+}
