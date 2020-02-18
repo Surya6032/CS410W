@@ -25,3 +25,19 @@ foreach $num (@scores)
 	  print("$num \n";
 	}
 }
+File Processing
+****************
+open(FP,"stuff.txt");
+open(FP,"stuff.txt")||die("bye");
+3 file mode:1)Read 2)write 3)Append
+	     "File"  ">File" ">>File"
+write:
+print FP "thing\n";
+read:
+$x=<FP>;     
+chomp($x);
+or
+open(FP,"file.txt");
+@data=<FP>;  //reads entire file to the list
+close(FP);
+chomp(@data);
