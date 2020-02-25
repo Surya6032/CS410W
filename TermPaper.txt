@@ -1,0 +1,9 @@
+Research Paper
+1)Around 10 Sources
+2)Literature Review:-Select overview of sources with a strong relation to your research question.It can include journal articles.
+  Purpose of Literature Review:-Discover previous research looked at ideas similar to yours.Gives overview of sources you explored while reasearch
+3)Answers to literatur Review:-What is known about the subject?What is the chronology of knowledge of subject?
+Literature Review is not annoted bibligoraphy.Literature review is synthesis of knowledge.
+4)Library Resources:-Discovery,UNACAT(Browsing the Stacks QA-75-QA76.95(3rd floor)),CS Databases
+5)ACM
+6)libguideuna.edu/cs410w
