@@ -1,0 +1,7 @@
+*Why do programming language provide subroutines?
+my:- every variable we use is global
+System Programming
+*******************
+process
+cat t1.pl//Use command
+chmod 700 *.pl//Permesion for perl files
