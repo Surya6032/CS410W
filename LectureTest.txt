@@ -5,3 +5,207 @@ System Programming
 process
 cat t1.pl//Use command
 chmod 700 *.pl//Permesion for perl files
+grep//searches the current folder to check if it has a string or not.
+
+ cat t3.pl
+
+cat testtick2.pl
+./testtick2.pl
+
+Fork:- Identical copy of the process that has been created 
+$x=Fork
+^
+|
+child:return 0
+parent: return PID of child
+
+ps//command
+
+						Class Work
+cat t1.pl
+#!/usr/bin/perl
+
+system('ls');
+cs$ ./t1.pl
+ksh: ./t1.pl: cannot execute - Permission denied
+cs$ ls -l
+total 76
+-rw-r--r--  1 susing  susing   250 Feb 27 10:03 args.pl
+-rw-r--r--  1 susing  susing   840 Feb 27 10:03 client.pl
+-rw-r--r--  1 susing  susing   347 Feb 27 10:03 f1.pl
+-rw-r--r--  1 susing  susing    89 Feb 27 10:03 f2.pl
+-rw-r--r--  1 susing  susing   213 Feb 27 10:03 loop.pl
+-rw-r--r--  1 susing  susing   362 Feb 27 10:03 pipe.pl
+-rw-r--r--  1 susing  susing   493 Feb 27 10:03 pipe2.pl
+-rw-r--r--  1 susing  susing   567 Feb 27 10:03 pipe3.pl
+-rw-r--r--  1 susing  susing   604 Feb 27 10:03 pipe4.pl
+-rw-r--r--  1 susing  susing   376 Feb 27 10:03 pipe5.pl
+-rw-r--r--  1 susing  susing  1270 Feb 27 10:03 server.pl
+-rw-r--r--  1 susing  susing   441 Feb 27 10:03 switches.pl
+-rw-r--r--  1 susing  susing    31 Feb 27 10:03 t1.pl
+-rw-r--r--  1 susing  susing   107 Feb 27 10:03 t2.pl
+-rw-r--r--  1 susing  susing   124 Feb 27 10:03 t3.pl
+-rw-r--r--  1 susing  susing    73 Feb 27 10:03 testtick.pl
+-rw-r--r--  1 susing  susing   198 Feb 27 10:03 testtick2.pl
+-rw-r--r--  1 susing  susing   340 Feb 27 10:03 wait.pl
+-rw-r--r--  1 susing  susing   401 Feb 27 10:03 waitpid.pl
+cs$ chmod 700 *
+cs$ chmod 700 *.pl
+cs$ ls-l
+ksh: ls-l: not found
+cs$ ls -l
+total 76
+-rwx------  1 susing  susing   250 Feb 27 10:03 args.pl
+-rwx------  1 susing  susing   840 Feb 27 10:03 client.pl
+-rwx------  1 susing  susing   347 Feb 27 10:03 f1.pl
+-rwx------  1 susing  susing    89 Feb 27 10:03 f2.pl
+-rwx------  1 susing  susing   213 Feb 27 10:03 loop.pl
+-rwx------  1 susing  susing   362 Feb 27 10:03 pipe.pl
+-rwx------  1 susing  susing   493 Feb 27 10:03 pipe2.pl
+-rwx------  1 susing  susing   567 Feb 27 10:03 pipe3.pl
+-rwx------  1 susing  susing   604 Feb 27 10:03 pipe4.pl
+-rwx------  1 susing  susing   376 Feb 27 10:03 pipe5.pl
+-rwx------  1 susing  susing  1270 Feb 27 10:03 server.pl
+-rwx------  1 susing  susing   441 Feb 27 10:03 switches.pl
+-rwx------  1 susing  susing    31 Feb 27 10:03 t1.pl
+-rwx------  1 susing  susing   107 Feb 27 10:03 t2.pl
+-rwx------  1 susing  susing   124 Feb 27 10:03 t3.pl
+-rwx------  1 susing  susing    73 Feb 27 10:03 testtick.pl
+-rwx------  1 susing  susing   198 Feb 27 10:03 testtick2.pl
+-rwx------  1 susing  susing   340 Feb 27 10:03 wait.pl
+-rwx------  1 susing  susing   401 Feb 27 10:03 waitpid.pl
+cs$ ./t1.pl
+args.pl       f2.pl         pipe2.pl      pipe5.pl      t1.pl         testtick.pl   waitpid.pl
+client.pl     loop.pl       pipe3.pl      server.pl     t2.pl         testtick2.pl
+f1.pl         pipe.pl       pipe4.pl      switches.pl   t3.pl         wait.pl
+cs$ cat t2.pl
+#!/usr/bin/perl
+
+print "Enter string to search for: ";
+$str = <STDIN>;
+chomp($str);
+system("grep $str *");
+cs$ ./t2.pl
+Enter string to search for: dog
+f2.pl:print "$$ dog\n";
+pipe5.pl:    print O1 "dog\n";
+cs$ cat t3.pl
+#!/usr/bin/perl
+
+print "This is before the exec command\n";
+exec('ls');
+print "Experts say this line will never execute\n";
+cs$ cat testtick.pl
+#!/usr/bin/perl
+
+
+$result = `finger`;
+
+print "The result is:\n$result";
+
+cs$ ./testtick.pl
+The result is:
+Login    Name                 Tty  Idle  Login Time   Office     Office Phone
+anlemu   Antonio Lemus         p7     -     Thu 09:23
+ansamu   Anthony Samuel        pp     -     Thu 10:04
+aurain   Austin Rainer         ph     -     Thu 09:34
+brdemp   Braxton Dempsey       pr     -     Thu 10:05
+brrish   Bryan Risher          ps     -     Thu 10:05
+dafrie   David Friend          pa     -     Thu 09:27
+damars   David Marsh           pd     -     Thu 09:29
+hawen    Hangyang Wen          pt     -     Thu 10:05
+homull   Holden Mullican       pn     -     Thu 10:08
+isclot   Isaiah Clotfelter     pm     -     Thu 10:03
+jacosb   Jalyn Cosby           p9     -     Thu 09:27
+jobord   Joshua Borden         pc     -     Thu 09:28
+kiwill   Kirstie Williams      pw     -     Thu 10:09
+laweek   Lacey Weeks           p6     -     Thu 09:18
+manorw   Mary Norwood          pk     -     Thu 10:03
+mibrum   Michael Brummitt      pl     -     Thu 10:03
+miedmo   Micah Edmonds         pb     -     Thu 09:27
+mterwilliger Mark Terwilliger      pu     -     Thu 10:05
+obilan   Oberon Ilano          p8     -     Thu 10:07
+rifinc   Richard Finch         p5     -     Thu 09:14
+rygann   Ryan Gann             pj     -     Thu 10:00
+ryhick   Ryan Hicks            pf     -     Thu 09:33
+sacave   Sallye Cavett         pi     -     Thu 09:41
+susing   Surya Singh           pq     -     Thu 10:04
+sycart   Sylver Carter         pe     -     Thu 09:30
+typick   Tyre Pickett          pv     -     Thu 10:05
+wibras   William Brasher       pg     -     Thu 09:34
+cs$ cat testtick2.pl
+#!/usr/bin/perl
+
+@result = `ls -l`;
+
+$size = @result;
+print "The size of the list is $size\n";
+
+print "0: $result[0]\n";
+print "1: $result[1]\n";
+print "2: $result[2]\n";
+print "3: $result[3]\n";
+
+cs$ ./testtick2.pl
+The size of the list is 20
+0: total 76
+
+1: -rwx------  1 susing  susing   250 Feb 27 10:03 args.pl
+
+2: -rwx------  1 susing  susing   840 Feb 27 10:03 client.pl
+
+3: -rwx------  1 susing  susing   347 Feb 27 10:03 f1.pl
+
+cs$
+cs$
+cs$ cat f1.pl
+#!/usr/bin/perl
+
+print "PARENT: start\n";
+$ret=fork();
+if ($ret == 0)
+{
+ sleep(rand(5));
+  print "CHILD: i am the child\n";
+  print "CHILD: My id is $$\n";
+  $parid = getppid();
+  print "CHILD: My parent id is $parid\n";
+}
+else
+{
+  sleep(10+rand(5));
+  print "PARENT: i am the parent - the childs id is $ret\n";
+  print "PARENT: My id is $$\n";
+}
+
+
+*IPC
+1)Files
+2)pipes
+3)sockets
+
+
+
+cs$ cp
+usage: cp [-afipv] [-R [-H | -L | -P]] source target
+       cp [-afipv] [-R [-H | -L | -P]] source ... directory
+cs$ cat args.pl
+#!/usr/bin/perl
+
+die("Usage: argv.pl length width") if (@ARGV != 2);
+
+print "1st argument is $ARGV[0]\n";
+print "2nd argument is $ARGV[1]\n";
+
+$length = $ARGV[0];
+$width  = $ARGV[1];
+
+$area = $length * $width;
+
+print "$length x $width is $area\n";
+cs$ ./args.pl
+Usage: argv.pl length width at ./args.pl line 3.
+cs$ ./args.pl 33 44
+1st argument is 33
+2nd argument is 44
+33 x 44 is 1452
