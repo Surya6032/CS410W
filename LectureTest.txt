@@ -209,3 +209,6 @@ cs$ ./args.pl 33 44
 1st argument is 33
 2nd argument is 44
 33 x 44 is 1452
+
+#ps kills the process
+ps>file.txt redirect the input
