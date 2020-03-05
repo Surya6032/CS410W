@@ -52,3 +52,4 @@ Hello World
 
 finger
 write dafrie
+check copy command
