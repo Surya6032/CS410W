@@ -46,3 +46,9 @@ total 8
 
 ./hello.pl
 Hello World
+
+
+
+
+finger
+write dafrie
